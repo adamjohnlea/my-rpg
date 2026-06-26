@@ -17,10 +17,6 @@ Engine: Phaser 4 (TypeScript, Vite). Engine authority agent: phaser-specialist. 
 
 @.claude/docs/directory-structure.md
 
-## Engine Version Reference
-
-@docs/engine-reference/godot/VERSION.md
-
 ## Technical Preferences
 
 @.claude/docs/technical-preferences.md
