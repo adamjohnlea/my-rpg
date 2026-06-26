@@ -8,8 +8,28 @@
 > Last worked: 2026-06-26. **UNCOMMITTED** — concept revisions + review log not yet committed.
 
 ## Current Task
-**Tier-0.5 narrative/discovery prototype COMPLETE → PIVOT.** Next: prototype the revised
-"lore-as-power" discovery loop (see PIVOT-NOTE), then `/map-systems`.
+**Pre-production prototyping COMPLETE.** Both core hypotheses validated. Next: fold prototype
+learnings into the concept (light update) → `/map-systems`. Recommended order in Next steps below.
+
+### Lore-as-power prototype result (2026-06-26) → PROCEED
+- "Knowledge is Power" (Phaser 4 engine slice, `prototypes/lore-as-power-concept/`) →
+  **PROCEED** (hypothesis CONFIRMED). Report: `prototypes/lore-as-power-concept/REPORT.md`.
+- **Validated:** lore → thematic mechanical perk (knowledge = power) pulls the player FORWARD
+  into exploration, no deduction. Wildfire bounces off Fireward = the payoff.
+- **Emotional core (consistent across BOTH discovery prototypes):** faction-gated SOCIAL
+  encounters (wanderer/traveler vs. soldier/barbarian rebuff). Route discovery through
+  *peoples with dispositions*, not just sites.
+- **PROCEED design note:** discovery must be **organic & non-linear across a large map** —
+  NOT fixed labeled destinations (the prototype's flatness was its contrived setup, not the
+  mechanic). Perks earned through real venturing will "land much harder."
+- Review mode: lean (CD-PLAYTEST skipped).
+
+### Pre-production status
+- ✅ Concept (brainstorm) → design-review (NEEDS REVISION → revised → approved)
+- ✅ Prototype 1: season-turn building loop → PROCEED
+- ✅ Prototype 2: Earned Discovery → PIVOT (deduction) → **lore-as-power → PROCEED**
+- Uncommitted: prototypes/lore-as-power-concept/, .claude/launch.json (lore-as-power-proto),
+  prototypes/index.md, production/session-state/active.md.
 
 ### Discovery prototype result (2026-06-26)
 - "The Unclaimed Valley" (HTML clue-assembly slice) → **PIVOT** (hypothesis PARTIALLY

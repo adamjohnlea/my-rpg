@@ -12,6 +12,12 @@
       "runtimeExecutable": "python3",
       "runtimeArgs": ["-m", "http.server", "5181", "--directory", "prototypes/unclaimed-valley-concept"],
       "port": 5181
+    },
+    {
+      "name": "lore-as-power-proto",
+      "runtimeExecutable": "/Users/adamlea/Library/Application Support/Herd/config/nvm/versions/node/v22.22.0/bin/node",
+      "runtimeArgs": ["node_modules/vite/bin/vite.js", "prototypes/lore-as-power-concept", "--port", "5182", "--strictPort"],
+      "port": 5182
     }
   ]
 }
