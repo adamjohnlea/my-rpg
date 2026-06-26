@@ -1,7 +1,7 @@
 # Game Concept: Hearthfall
 
 *Created: 2026-06-25*
-*Status: Reviewed & revised 2026-06-26 (design-review: NEEDS REVISION → blockers resolved)*
+*Status: Reviewed & revised 2026-06-26 (design-review passed; both core loops prototyped — building loop + lore-as-power discovery, both PROCEED)*
 
 ---
 
@@ -76,6 +76,32 @@ question, never after it.
 
 ---
 
+## Earned Discovery — Validated Delivery (lore-as-power)
+
+*How the dominant aesthetic is actually delivered — validated by the Tier-0.5 prototype
+(`prototypes/lore-as-power-concept/`, verdict PROCEED). An earlier deduction-puzzle version
+was built and **pivoted away from**: discovery is a **reward engine, not a puzzle**.*
+
+- **Lore as power, no deduction.** Lore fragments are found through play and *assemble
+  themselves* into a body of knowledge; completing one grants a **thematically-matched
+  mechanical perk** (learn *The Great Fire* → a fire-defense perk that pays off when a wildfire
+  comes). Knowledge literally becomes power, so discovery **pulls the player forward into
+  exploration** instead of interrupting it. The player never has to "solve" anything.
+- **Knowledge flows through peoples first.** The emotional core — consistent across *both*
+  discovery prototypes — is **talking to people**, and access is **faction-gated**: receptive
+  folk (wanderers, traders, hermits) share lore; closed ones (soldiers, barbarians) refuse.
+  *Who will talk to you* is part of *A World With Its Own Will*. Sites and ruins are a
+  secondary source.
+- **Organic, never a menu.** Lore and conversations must be **discovered naturally while
+  exploring a large, non-linear world** — never presented as fixed, labeled destinations.
+  (The prototype's labeled pins were its one flat note; perks "earned through real venturing"
+  land far harder.)
+- **Ties the loop together.** This is the concrete form of Core Mechanic 4's *knowledge/keys*
+  channel and a primary reason to venture out — directly serving *Earned Discovery* and the
+  *Build-and-venture* rhythm.
+
+---
+
 ## Player Experience Analysis (MDA Framework)
 
 ### Target Aesthetics (What the player FEELS)
@@ -104,7 +130,7 @@ question, never after it.
 1. **Season-turn settlement building** — place/construct buildings and work plots within a turn, then advance the season.
 2. **Hands-on → directive growth (additive)** — direct manipulation early (you build); delegation/automation *layers on top* later (you command workers) **without ever removing hands-on control**. You can always get your hands on the hearth — directive tools add reach, they don't replace touch. (Protects the one thing the Tier-0 prototype proved is fun.)
 3. **Reactive world systems** — races, faiths, and factions with agendas that trade, migrate, threaten, and respond to your rise.
-4. **Build-and-venture rhythm (interlocking, not optional)** — a healthy home funds and provisions expeditions; expeditions are in turn the *only* source of three things home growth comes to require: (a) **expedition-only rare materials** that gate higher tiers, (b) **new settlers** (and their cultures/skills) that lift the population ceiling, and (c) **knowledge/keys** — recipes, cultural access, mystery clues — that unlock new buildings and trade. Like Civ, a player who wants to grow ends up using all three; neither half is a "bonus mode."
+4. **Build-and-venture rhythm (interlocking, not optional)** — a healthy home funds and provisions expeditions; expeditions are in turn the *only* source of three things home growth comes to require: (a) **expedition-only rare materials** that gate higher tiers, (b) **new settlers** (and their cultures/skills) that lift the population ceiling, and (c) **knowledge/keys** — recipes, cultural access, mystery clues — that unlock new buildings and trade *and grant thematic perks* (lore-as-power; see *Earned Discovery — Validated Delivery*). Like Civ, a player who wants to grow ends up using all three; neither half is a "bonus mode."
 5. **Data-driven economy & strategic stakes** — resources, trade, disasters/raids resolved by planning, not reflexes.
 6. **Spatial adjacency / zoning** *(candidate — promoted from the Tier-0 prototype, where a playtester self-organized buildings by type with no mechanical prompt)* — where you place buildings matters: adjacency bonuses/penalties, districts, desirability. A *systemic* (not authored) source of optimization depth that fights the plateau and gives the mid-game something to do beyond "place building / assign worker."
 
@@ -329,7 +355,7 @@ frontier and settlement history (homesteads, trade roads, the meeting of culture
 2. *What exactly triggers/structures the hands-on → directive shift?* — **Direction set: additive** (hands-on is never removed). The precise trigger/structure is resolved in the core-loop GDD + prototype.
 3. *How "4X" do the stakes get — raids/disasters only, or full inter-faction war?* — Resolved during systems design; bounded by *Cleverness Over Reflexes*.
 4. *How much of the world is procedural vs. authored?* — Resolved in architecture/worldbuilding design.
-5. *Does Earned Discovery / the narrative axis actually deliver the promised emotional payoff?* — **Unvalidated and load-bearing.** The Tier-0 prototype tested only the systemic economy; the game's market differentiator (Discovery + Narrative — the *dominant* aesthetic) has never been played. **Recommended: a focused Tier-0.5 narrative/discovery prototype — a small scene where the player uncovers a cultural/cataclysm secret through systemic play — before committing to `/map-systems`.**
+5. *Does Earned Discovery / the narrative axis actually deliver the promised emotional payoff?* — **RESOLVED (2026-06-26).** Tested via the Tier-0.5 prototype: a deduction-puzzle framing failed (PIVOT), but a **lore-as-power** framing **PROCEEDED** — discovery as a reward engine (lore → thematic perk) routed through faction-gated peoples pulls the player forward. See *Earned Discovery — Validated Delivery* and `prototypes/lore-as-power-concept/REPORT.md`. Remaining unknown for `/map-systems`/vertical-slice: that discovery feels right when **organic across a large map** (the prototype was deliberately linear).
 6. *Does spatial placement carry mechanical weight (adjacency/zoning), or stay cosmetic?* — Resolved in `/map-systems`; the prototype's unprompted zoning behavior argues for promoting it to a core system (see Core Mechanic 6).
 
 ---
@@ -378,9 +404,9 @@ own sake.*
 - [x] `/setup-engine` — Phaser 4 locked.
 - [x] **`/prototype` the Tier-0 core mechanic** — PROCEED; turn-based tactile building is fun (resolved Open Question 1).
 - [x] `/design-review design/gdd/game-concept.md` — **DONE 2026-06-26: NEEDS REVISION → revised.** Blockers resolved (see Central Mystery, Loop Coupling & Economic Drain, additive transition, scaling-upkeep sink, strengthened MVP, colorblind constraint, spatial-zoning mechanic).
-- [ ] **Tier-0.5 narrative/discovery prototype** — validate the unproven *dominant* aesthetic (Earned Discovery) before writing GDDs. *(Creative-director recommendation from the design review; resolves Open Question 5.)*
+- [x] **Tier-0.5 narrative/discovery prototype** — DONE. Deduction → PIVOT; **lore-as-power → PROCEED**. Resolved Open Question 5. See *Earned Discovery — Validated Delivery*.
 - [ ] `/art-bible` — establish the visual identity spec (carry the **colorblind hard constraint**: color is never the only signal).
-- [ ] `/map-systems` — decompose into systems with dependencies (add **Spatial Adjacency / Zoning** as a candidate system; resolves Open Question 6).
+- [ ] `/map-systems` — decompose into systems with dependencies (add **Lore-as-Power Discovery** and **Spatial Adjacency / Zoning** as systems; resolves Open Question 6).
 - [ ] `/design-system [system]` — author per-system GDDs in dependency order.
 - [ ] `/create-architecture` → `/architecture-decision (×N)` → `/architecture-review`.
 - [ ] `/vertical-slice` — validate the full loop before committing to Production.
