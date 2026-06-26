@@ -2,18 +2,36 @@
 
 > ▶ **TO RESUME (new session):** Read this whole file, then
 > `design/gdd/game-concept.md` and `prototypes/homestead-loop-concept/REPORT.md`.
-> That restores full context. The recommended next command is
-> **`/design-review design/gdd/game-concept.md`** (see Next steps below).
-> Last worked: 2026-06-25. Everything is committed and pushed to origin/main.
+> That restores full context. The recommended next command is the
+> **Tier-0.5 narrative/discovery prototype** (`/prototype`) — validate Earned Discovery
+> before `/map-systems` (see Next steps below).
+> Last worked: 2026-06-26. **UNCOMMITTED** — concept revisions + review log not yet committed.
 
 ## Current Task
-Hearthfall pre-production. Concept + concept-prototype COMPLETE. Next: fold prototype
-learnings into design, then `/map-systems`.
+Hearthfall pre-production. Concept + concept-prototype + design-review COMPLETE.
+Next: validate the unproven narrative axis (Tier-0.5 prototype), then `/map-systems`.
 
 ## Status
 - ✅ `/brainstorm` → `design/gdd/game-concept.md` (committed, pushed)
 - ✅ `/prototype` (Engine/Phaser) → **PROCEED**. Report:
   `prototypes/homestead-loop-concept/REPORT.md`
+- ✅ `/design-review design/gdd/game-concept.md` (2026-06-26) → **NEEDS REVISION → revised
+  & accepted APPROVED**. 5-agent panel. Log: `design/gdd/reviews/game-concept-review-log.md`
+
+## Design-review decisions folded into the concept (2026-06-26)
+- **Loop coupling**: home↔expedition now interlock via 3 demands (rare materials, settlers,
+  knowledge) + reciprocal home investment — no more "bonus mode" expeditions.
+- **Central mystery direction**: a **cataclysm / fallen civilization** (payoff designed with
+  the question, not after).
+- **Sink**: **scaling upkeep/maintenance** (strategic anti-plateau drain; raids stay as
+  setbacks on top).
+- **Transition**: **additive** — hands-on never removed.
+- **Spatial Adjacency / Zoning** promoted to candidate Core Mechanic #6.
+- **Colorblind hard constraint** added to Visual Identity (carry into `/art-bible`).
+- **MVP strengthened** to actually test the sink + a winter-severity escalation ramp + the
+  expedition dependency (not just an optional boon).
+- **OPEN/UNVALIDATED**: the *dominant* Discovery+Narrative aesthetic has never been played →
+  Tier-0.5 narrative prototype recommended next.
 
 ## Prototype verdict: PROCEED (hypothesis CONFIRMED)
 Turn-based building loop felt satisfying — playtester advanced 15+ seasons unprompted
@@ -31,11 +49,13 @@ Turn-based building loop felt satisfying — playtester advanced 15+ seasons unp
 4. Onboarding: discoverable (good), but first read of yields/needs should be taught
    more gently.
 
-## Next steps (PROCEED path)
-1. `/design-review design/gdd/game-concept.md`
+## Next steps
+1. **Tier-0.5 narrative/discovery prototype** (`/prototype`) — validate Earned Discovery
+   (the unproven *dominant* aesthetic) before writing GDDs. Small scene: uncover a
+   cultural/cataclysm secret through systemic play, not a text dump.
 2. `/gate-check`
-3. `/art-bible` (lock "crisp & clean / readability-first")
-4. `/map-systems` (add Spatial Adjacency / Zoning as a system)
+3. `/art-bible` (lock "crisp & clean / readability-first"; carry the colorblind hard constraint)
+4. `/map-systems` (add Spatial Adjacency / Zoning as a candidate system)
 5. `/design-system [mechanic]`
 
 ## Notes

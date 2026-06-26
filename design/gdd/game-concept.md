@@ -1,7 +1,7 @@
 # Game Concept: Hearthfall
 
 *Created: 2026-06-25*
-*Status: Draft*
+*Status: Reviewed & revised 2026-06-26 (design-review: NEEDS REVISION → blockers resolved)*
 
 ---
 
@@ -58,6 +58,24 @@ in that gap — Civ's systems with Stardew's heart and Skyrim's sense of place.
 
 ---
 
+## Central Mystery — Answer Direction
+
+*The throughline ("why did the land sit unclaimed?") needs a committed direction now — not
+the full story, but enough to anchor every faction, expedition site, and authored beat
+downstream, and to avoid a "mystery box with no payoff."*
+
+**Direction: a cataclysm / fallen civilization.** A people were here before; something
+destroyed or drove them out, and the land has sat scarred and recovering ever since. The
+region's ruins, relics, and the present races'/faiths' half-remembered fears are the
+breadcrumbs; piecing together *what happened, why, and whether it's truly over* is the
+earned discovery. (North star: the awe of the Fallout vault door — a buried truth uncovered
+through play, not narrated up front.) The specific cataclysm, its cause, and its payoff are
+authored later in worldbuilding/narrative design; this section only fixes the *category* so
+downstream systems can be built coherently — and so the payoff is designed alongside the
+question, never after it.
+
+---
+
 ## Player Experience Analysis (MDA Framework)
 
 ### Target Aesthetics (What the player FEELS)
@@ -84,10 +102,11 @@ in that gap — Civ's systems with Stardew's heart and Skyrim's sense of place.
 
 ### Core Mechanics (Systems we build)
 1. **Season-turn settlement building** — place/construct buildings and work plots within a turn, then advance the season.
-2. **Hands-on → directive growth** — direct manipulation early (you build), delegation/automation later (you command workers).
+2. **Hands-on → directive growth (additive)** — direct manipulation early (you build); delegation/automation *layers on top* later (you command workers) **without ever removing hands-on control**. You can always get your hands on the hearth — directive tools add reach, they don't replace touch. (Protects the one thing the Tier-0 prototype proved is fun.)
 3. **Reactive world systems** — races, faiths, and factions with agendas that trade, migrate, threaten, and respond to your rise.
-4. **Build-and-venture rhythm** — expeditions to distant locales that return resources, settlers, and story fragments.
+4. **Build-and-venture rhythm (interlocking, not optional)** — a healthy home funds and provisions expeditions; expeditions are in turn the *only* source of three things home growth comes to require: (a) **expedition-only rare materials** that gate higher tiers, (b) **new settlers** (and their cultures/skills) that lift the population ceiling, and (c) **knowledge/keys** — recipes, cultural access, mystery clues — that unlock new buildings and trade. Like Civ, a player who wants to grow ends up using all three; neither half is a "bonus mode."
 5. **Data-driven economy & strategic stakes** — resources, trade, disasters/raids resolved by planning, not reflexes.
+6. **Spatial adjacency / zoning** *(candidate — promoted from the Tier-0 prototype, where a playtester self-organized buildings by type with no mechanical prompt)* — where you place buildings matters: adjacency bonuses/penalties, districts, desirability. A *systemic* (not authored) source of optimization depth that fights the plateau and gives the mid-game something to do beyond "place building / assign worker."
 
 ---
 
@@ -139,6 +158,22 @@ Your settlement rises through tiers — **homestead → hamlet → village → t
 seat** — each unlocking new buildings, new races/faiths willing to deal with you, and
 new regions to reach. The long goal: become the *crossroads of the region* and uncover
 why the land sat unclaimed and what its peoples truly are.
+
+### Loop Coupling & Economic Drain
+*Two design commitments that keep the loop from plateauing — the Tier-0 prototype's key
+risk (the base loop is fun but goes slack once the economy is "solved").*
+
+- **Why home and expedition need each other.** Home-building is *not* self-sufficient at
+  scale. The upper tiers require expedition-only rare materials; the population ceiling only
+  rises by recruiting settlers found in the world; and many buildings/trades stay locked
+  until expeditions return the knowledge to unlock them. Conversely, expeditions can't run
+  without a healthy home to provision and staff them. Each half creates a demand only the
+  other can satisfy — that mutual dependency *is* the loop.
+- **The continuous drain (sink).** Settlement **upkeep/maintenance scales with size and
+  tier**: bigger means costlier to sustain and repair, so growth always creates fresh drain.
+  This is the primary anti-plateau mechanism — a *strategic* pressure (managed by planning)
+  rather than a *reflexive* punishment, honoring Pillar 3 (*Cleverness Over Reflexes*).
+  Raids/disasters remain as setbacks layered on top, never the only source of pressure.
 
 ### Retention Hooks
 - **Curiosity**: Unexplored locales, untranslated cultures, the central regional mystery, the next settlement tier.
@@ -212,6 +247,11 @@ before it can be forgotten.*
      meaningful color, desaturate it.*
   3. **Calm base, bold accents** — *Test: is the base board restful enough to read for
      hours? Saturation is reserved for what matters.*
+  4. **Color is never the *only* signal** — *Test: is any meaningful state (faction,
+     resource, alert) distinguishable without color? Shape, icon, label, or pattern must
+     always accompany color, so the ~8% of players with colorblindness can read the board.*
+     This is a **hard constraint, not a preference** — because *Color carries meaning* makes
+     color load-bearing, it must hold from the first asset (carry into `/art-bible`).
 - **Color philosophy**: A restful warm-neutral board the player can study for hours;
   saturated accent color reserved for meaning — faction identity, your hearth/town
   center, and alerts.
@@ -285,10 +325,12 @@ frontier and settlement history (homesteads, trade roads, the meeting of culture
 - **First-game project management** over 2–3 years is itself the hardest risk. *Mitigation: the studio pipeline — sprints, gates, vertical slices.*
 
 ### Open Questions (need prototyping/research)
-1. *Does turn-based, tactile building feel good moment-to-moment?* — Resolved by the Tier-0 prototype.
-2. *What exactly triggers/structures the hands-on → directive shift?* — Resolved in core-loop GDD + prototype.
+1. *Does turn-based, tactile building feel good moment-to-moment?* — **Resolved (PROCEED)** by the Tier-0 prototype, which also surfaced that the base loop *plateaus* once solved (see the MVP escalation requirement).
+2. *What exactly triggers/structures the hands-on → directive shift?* — **Direction set: additive** (hands-on is never removed). The precise trigger/structure is resolved in the core-loop GDD + prototype.
 3. *How "4X" do the stakes get — raids/disasters only, or full inter-faction war?* — Resolved during systems design; bounded by *Cleverness Over Reflexes*.
 4. *How much of the world is procedural vs. authored?* — Resolved in architecture/worldbuilding design.
+5. *Does Earned Discovery / the narrative axis actually deliver the promised emotional payoff?* — **Unvalidated and load-bearing.** The Tier-0 prototype tested only the systemic economy; the game's market differentiator (Discovery + Narrative — the *dominant* aesthetic) has never been played. **Recommended: a focused Tier-0.5 narrative/discovery prototype — a small scene where the player uncovers a cultural/cataclysm secret through systemic play — before committing to `/map-systems`.**
+6. *Does spatial placement carry mechanical weight (adjacency/zoning), or stay cosmetic?* — Resolved in `/map-systems`; the prototype's unprompted zoning behavior argues for promoting it to a core system (see Core Mechanic 6).
 
 ---
 
@@ -301,10 +343,18 @@ own sake.*
 **Required for MVP** (Vertical Slice):
 1. One starting valley with the season-turn loop.
 2. Settlement tiers homestead → hamlet → village (~3 tiers) with a small building set.
-3. A basic resource economy + a shop/trade interaction.
+3. A basic resource economy with **scaling upkeep** (the anti-plateau sink) and **one
+   escalation variable** — a winter-severity ramp — plus a shop/trade interaction. *(The
+   Tier-0 prototype proved the base loop is fun but plateaus once solved; the MVP must test
+   that the sink + an escalating threat carry engagement past that plateau — otherwise it
+   re-learns nothing the prototype didn't already show.)*
 4. ONE neighboring culture that reacts — trades with you **and** threatens you (a raid or a brutal winter).
-5. ONE expedition site that returns a tangible boon.
-6. One small authored mystery to uncover (a thin slice of *Earned Discovery*).
+5. ONE expedition site that returns something a higher settlement tier **requires** (an
+   expedition-only material *or* a settler that lifts the population ceiling) — proving the
+   build-and-venture *dependency*, not just an optional boon.
+6. One small authored mystery to uncover — a thin, self-contained slice of the **cataclysm**
+   throughline (a ruin with a discoverable reveal), to test whether *Earned Discovery*
+   actually lands.
 
 **Explicitly NOT in MVP** (defer):
 - Multiple regions, the full 3–4 races/faiths, and deep diplomacy.
@@ -325,11 +375,12 @@ own sake.*
 
 ## Next Steps
 
-- [ ] `/setup-engine` — already configured (Phaser 4 locked); no action needed beyond version confirmation.
-- [ ] `/art-bible` — establish the visual identity spec from the Visual Identity Anchor above (before GDDs).
-- [ ] `/design-review design/gdd/game-concept.md` — validate concept completeness.
-- [ ] **`/prototype` the Tier-0 core mechanic** — prove turn-based tactile building is fun before writing GDDs (resolves Open Question 1).
-- [ ] If prototype PROCEEDS: `/map-systems` — decompose into systems with dependencies.
+- [x] `/setup-engine` — Phaser 4 locked.
+- [x] **`/prototype` the Tier-0 core mechanic** — PROCEED; turn-based tactile building is fun (resolved Open Question 1).
+- [x] `/design-review design/gdd/game-concept.md` — **DONE 2026-06-26: NEEDS REVISION → revised.** Blockers resolved (see Central Mystery, Loop Coupling & Economic Drain, additive transition, scaling-upkeep sink, strengthened MVP, colorblind constraint, spatial-zoning mechanic).
+- [ ] **Tier-0.5 narrative/discovery prototype** — validate the unproven *dominant* aesthetic (Earned Discovery) before writing GDDs. *(Creative-director recommendation from the design review; resolves Open Question 5.)*
+- [ ] `/art-bible` — establish the visual identity spec (carry the **colorblind hard constraint**: color is never the only signal).
+- [ ] `/map-systems` — decompose into systems with dependencies (add **Spatial Adjacency / Zoning** as a candidate system; resolves Open Question 6).
 - [ ] `/design-system [system]` — author per-system GDDs in dependency order.
 - [ ] `/create-architecture` → `/architecture-decision (×N)` → `/architecture-review`.
 - [ ] `/vertical-slice` — validate the full loop before committing to Production.
