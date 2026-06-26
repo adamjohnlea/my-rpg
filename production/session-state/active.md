@@ -8,8 +8,15 @@
 > Last worked: 2026-06-26. **UNCOMMITTED** — concept revisions + review log not yet committed.
 
 ## Current Task
-**Pre-production prototyping COMPLETE.** Both core hypotheses validated. Next: fold prototype
-learnings into the concept (light update) → `/map-systems`. Recommended order in Next steps below.
+**Systems decomposition COMPLETE.** `/map-systems` ran → `design/gdd/systems-index.md` written
+(Draft). 25 systems; 21 in MVP/Vertical Slice. Next: author MVP GDDs in design order
+(`/design-system` or `/map-systems next`), starting with Data-Driven Content DB.
+- Key decisions: Perk/Modifier = shared system; Spatial Adjacency/Zoning deferred to Target Ship;
+  MVP = thin end-to-end slice of ~each system. Cycles resolved (Faction↔Dialogue; Save/Load contract).
+- High-risk: Save/Load, Resource Economy, Lore-as-Power (organic delivery), Faction (scope),
+  Shared Modifier (bottleneck), hands-on→directive (additive).
+- Lean mode: TD-SYSTEM-BOUNDARY / PR-SCOPE / CD-SYSTEMS gates skipped.
+- Uncommitted: design/gdd/systems-index.md, production/session-state/active.md.
 
 ### Lore-as-power prototype result (2026-06-26) → PROCEED
 - "Knowledge is Power" (Phaser 4 engine slice, `prototypes/lore-as-power-concept/`) →
