@@ -8,8 +8,26 @@
 > Last worked: 2026-06-26. **UNCOMMITTED** — concept revisions + review log not yet committed.
 
 ## Current Task
-Hearthfall pre-production. Concept + concept-prototype + design-review COMPLETE.
-Next: validate the unproven narrative axis (Tier-0.5 prototype), then `/map-systems`.
+**Tier-0.5 narrative/discovery prototype COMPLETE → PIVOT.** Next: prototype the revised
+"lore-as-power" discovery loop (see PIVOT-NOTE), then `/map-systems`.
+
+### Discovery prototype result (2026-06-26)
+- "The Unclaimed Valley" (HTML clue-assembly slice) → **PIVOT** (hypothesis PARTIALLY
+  CONFIRMED). Report: `prototypes/unclaimed-valley-concept/REPORT.md`.
+- **Finding:** the *deduction* step was flat and risks pulling the player out of the game;
+  knowledge from a *living person* (the traveler) was the spark.
+- **Pivot direction (next prototype):** **lore-as-power** — gather lore through venture/expand
+  play (and receptive peoples; wanderers yes, soldiers/barbarians no), no deduction; each body
+  of knowledge grants a *thematic mechanical perk* (e.g. "great fire" lore → fire defense).
+  Revised hypothesis + riskiest assumption in
+  `prototypes/unclaimed-valley-concept/PIVOT-NOTE.md`. Suggest an **engine** slice next so
+  discovery is felt *inside* play.
+- This refines the concept's Earned Discovery pillar + loop-coupling (expeditions return
+  knowledge/keys). Consider a light concept-doc update if the lore-as-power loop validates.
+- Uncommitted: prototypes/unclaimed-valley-concept/, .claude/launch.json (added discovery-proto),
+  production/session-state/active.md.
+
+(Prior: concept + concept-prototype + design-review COMPLETE — see below.)
 
 ## Status
 - ✅ `/brainstorm` → `design/gdd/game-concept.md` (committed, pushed)

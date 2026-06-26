@@ -6,6 +6,12 @@
       "runtimeExecutable": "npx",
       "runtimeArgs": ["vite", "prototypes/homestead-loop-concept", "--port", "5180", "--strictPort"],
       "port": 5180
+    },
+    {
+      "name": "discovery-proto",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "5181", "--directory", "prototypes/unclaimed-valley-concept"],
+      "port": 5181
     }
   ]
 }
