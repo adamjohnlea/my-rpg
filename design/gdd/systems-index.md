@@ -2,7 +2,7 @@
 
 > **Status**: Draft
 > **Created**: 2026-06-26
-> **Last Updated**: 2026-06-26
+> **Last Updated**: 2026-06-26 (Content DB + Season-Turn Loop GDDs designed)
 > **Source Concept**: design/gdd/game-concept.md
 
 ---
@@ -32,8 +32,8 @@ Priority tiers use the concept's vocabulary: **MVP** = Vertical Slice (thin slic
 
 | # | System Name | Category | Priority | Status | Design Doc | Depends On |
 |---|-------------|----------|----------|--------|------------|------------|
-| 1 | Data-Driven Content DB (inferred) | Core | MVP | Not Started | — | — |
-| 2 | Season-Turn Loop ★ | Core | MVP | Not Started | — | Content DB |
+| 1 | Data-Driven Content DB (inferred) | Core | MVP | Designed (review pending) | [data-driven-content-db.md](data-driven-content-db.md) | — |
+| 2 | Season-Turn Loop ★ | Core | MVP | Designed (review pending) | [season-turn-loop.md](season-turn-loop.md) | — *(was Content DB; removed — see GDD §Dependencies)* |
 | 3 | World Grid & Tilemap (inferred) | Core | MVP | Not Started | — | — |
 | 4 | Save/Load & World-State Serialization | Persistence | MVP | Not Started | — | (contract: all systems) |
 | 5 | Resource Economy ★ | Economy | MVP | Not Started | — | Season-Turn Loop, Content DB |
@@ -57,6 +57,7 @@ Priority tiers use the concept's vocabulary: **MVP** = Vertical Slice (thin slic
 | 23 | Spatial Adjacency / Zoning ★ | Gameplay | Target Ship | Not Started | — | Building & Placement, Shared Modifier |
 | 24 | Settler Identity / NPC State (inferred) | Narrative | Target Ship | Not Started | — | Population, Content DB |
 | 25 | Audio | Audio | Target Ship | Not Started | — | Season-Turn Loop, Settlement Tiers |
+| 26 | Game State / Session (inferred) | Core | MVP | Not Started | — | Save/Load, Season-Turn Loop, UI Framework |
 | — | Diplomacy · full 3–4 factions · full authored arc · multiple regions · religion/culture sim · modding | (various) | Target Ship / Full Vision | Not Started | — | (expand MVP systems) |
 
 ---
@@ -65,7 +66,7 @@ Priority tiers use the concept's vocabulary: **MVP** = Vertical Slice (thin slic
 
 | Category | Hearthfall systems |
 |----------|--------------------|
-| **Core** | Content DB, Season-Turn Loop, World Grid & Tilemap, Shared Modifier System |
+| **Core** | Content DB, Season-Turn Loop, World Grid & Tilemap, Shared Modifier System, Game State / Session |
 | **Gameplay** | Building & Placement, Population & Workers, Expedition, Faction/Reactive World, Disasters & Raids, Spatial Adjacency/Zoning |
 | **Progression** | Settlement Tiers & Progression |
 | **Economy** | Resource Economy, Trade/Market |
@@ -119,6 +120,7 @@ Priority tiers use the concept's vocabulary: **MVP** = Vertical Slice (thin slic
 3. **Per-System UIs** — each gameplay system + UI Framework.
 4. **Event Log & Notifications** — UI Framework + event emitters.
 5. **Audio** *(Target Ship)* — Season-Turn Loop, Tiers.
+6. **Game State / Session** — Save/Load, Season-Turn Loop, UI Framework. *App-shell: boot → main menu → new game/load → run loop → pause → quit; owns the game-over/victory handoff. Win/loss conditions stay distributed — detecting systems (Tiers/Central Mystery; later Population) emit signals it handles. MVP = soft-only (no hard lose-screen; vertical-slice victory screen only).*
 
 ### Polish Layer (depends on everything)
 1. **Onboarding / Teaching** — most gameplay + UI.
@@ -153,7 +155,8 @@ MVP systems by dependency layer (write GDDs in this order; independent same-laye
 | 19 | Per-System UIs | MVP | Presentation | ux-designer | L |
 | 20 | Event Log & Notifications | MVP | Presentation | ux-designer | S |
 | 21 | Onboarding / Teaching (minimal) | MVP | Polish | ux-designer | M |
-| 22+ | Target Ship: Adjacency/Zoning, Settler Identity, Audio, full Accessibility, full factions/diplomacy, authored arc | Target Ship | — | (per system) | — |
+| 22 | Game State / Session | MVP | Presentation | ux-designer + game-designer | M |
+| 23+ | Target Ship: Adjacency/Zoning, Settler Identity, Audio, full Accessibility, full factions/diplomacy, authored arc | Target Ship | — | (per system) | — |
 
 ---
 
@@ -181,12 +184,12 @@ MVP systems by dependency layer (write GDDs in this order; independent same-laye
 
 | Metric | Count |
 |--------|-------|
-| Total systems identified | 25 (+ deferred breadth items) |
-| MVP-tier systems | 21 (incl. accessibility constraint) |
-| Design docs started | 0 |
+| Total systems identified | 26 (+ deferred breadth items) |
+| MVP-tier systems | 22 (incl. accessibility constraint; +Game State/Session added 2026-06-26) |
+| Design docs started | 2 |
 | Design docs reviewed | 0 |
 | Design docs approved | 0 |
-| MVP systems designed | 0 / 21 |
+| MVP systems designed | 2 / 22 |
 | Target Ship systems designed | 0 / 4+ |
 
 ---

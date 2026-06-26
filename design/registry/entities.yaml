@@ -37,7 +37,7 @@
 #   Each entry: name, status, source, referenced_by[], attributes{}, added, revised
 
 version: 1
-last_updated: ""
+last_updated: "2026-06-26"
 
 # ─── ENTITIES ────────────────────────────────────────────────────────────────
 # Named game-world objects: enemies, NPCs, characters, factions, bosses.
@@ -139,7 +139,28 @@ formulas: []
 #
 # Required fields: name, status, source, referenced_by, value, unit, added
 
-constants: []
+constants:
+  - name: content_schema_version
+    status: active
+    source: design/gdd/data-driven-content-db.md
+    referenced_by:
+      - design/gdd/data-driven-content-db.md
+      # - design/gdd/save-load-serialization.md  # add when Save/Load GDD is authored (reads this to detect version skew)
+    value: 1
+    unit: version
+    added: 2026-06-26
+    revised: ""
+  - name: SEASONS_PER_YEAR
+    status: active
+    source: design/gdd/season-turn-loop.md
+    referenced_by:
+      - design/gdd/season-turn-loop.md
+      # - design/gdd/resource-economy.md   # add when authored (per-season yields keyed to the cycle)
+      # - design/gdd/disasters-and-raids.md # add when authored (escalation cadence = once per year)
+    value: 4
+    unit: seasons
+    added: 2026-06-26
+    revised: ""
 
 # Example:
 #

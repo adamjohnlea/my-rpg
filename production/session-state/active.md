@@ -27,7 +27,16 @@ MVP system GDDs in design order.**
 - ✅ `/map-systems` → **`design/gdd/systems-index.md`** (Draft): 25 systems, 21 in MVP
 
 ## Immediate next action
-Run **`/design-system Data-Driven Content DB`** — first MVP GDD in the design order.
+**✅ DONE:** `/design-system Data-Driven Content DB` → `design/gdd/data-driven-content-db.md` (all 8 required + Visual/Audio + UI + Open Questions). Status: **Designed (review pending)**. qa-lead consulted on Acceptance Criteria. Registry: `content_schema_version=1` added.
+Key locked decisions: 11 content categories, hard-fail-at-boot integrity, **typed TS data modules** (compile-time + branded ID types; format formally an ADR — OQ-1), **namespaced dotted IDs** (`building.sawmill`), frozen-after-load, read-only `get`/`tryGet`, `schemaVersion` for Save/Load skew.
+
+**✅ DONE:** `/design-system Season-Turn Loop` (#2) → `design/gdd/season-turn-loop.md`. Status: **Designed (review pending)**. qa-lead consulted on AC. Registry: `SEASONS_PER_YEAR=4` added. Systems-index corrected — Loop no longer depends on Content DB (hybrid season-config decision).
+Key locked decisions: 8-phase resolution order (Production→Consumption→Population→Storage→TierCheck→Events→AdvanceClock→BeginSeason), resolve-current-then-advance, hybrid season config (structure=const/effects=data → resolves Content DB OQ-4), Loop owns the time signal only (turnIndex/season/year/escalationLevel, read-only), save only in `Planning`, no terminal state.
+
+✅ **GAP RESOLVED (Season-Turn Loop OQ-2):** Added **Game State / Session** (system #26, Core, MVP) to the index — owns session lifecycle (menu/new-game/pause/quit) + game-over/victory handoff. Win/loss conditions stay distributed (detecting systems emit; Game State handles). **MVP = soft-only failure** (no hard lose-screen; vertical-slice victory screen only). Index now 26 systems / 22 MVP / 2 designed. Loop GDD OQ-2 marked resolved + dependency added.
+
+**Both GDDs still pending independent `/design-review` (fresh session).** Next system in order: **#3 World Grid & Tilemap** (Foundation; design for code/data + free Tiled, per the no-editor decision).
+
 Design order (MVP, by dependency layer; see systems-index.md for the full table):
 1. Data-Driven Content DB  2. Season-Turn Loop ★  3. World Grid & Tilemap
 4. Save/Load & Serialization  5. Resource Economy ★  6. Shared Modifier System
