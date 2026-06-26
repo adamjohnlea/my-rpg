@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "hearthfall-proto",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["vite", "prototypes/homestead-loop-concept", "--port", "5180", "--strictPort"],
+      "port": 5180
+    }
+  ]
+}
