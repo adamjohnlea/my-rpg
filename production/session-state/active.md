@@ -1,5 +1,11 @@
 # Active Session State
 
+> ▶ **TO RESUME (new session):** Read this whole file, then
+> `design/gdd/game-concept.md` and `prototypes/homestead-loop-concept/REPORT.md`.
+> That restores full context. The recommended next command is
+> **`/design-review design/gdd/game-concept.md`** (see Next steps below).
+> Last worked: 2026-06-25. Everything is committed and pushed to origin/main.
+
 ## Current Task
 Hearthfall pre-production. Concept + concept-prototype COMPLETE. Next: fold prototype
 learnings into design, then `/map-systems`.
